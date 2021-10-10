@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "laover.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

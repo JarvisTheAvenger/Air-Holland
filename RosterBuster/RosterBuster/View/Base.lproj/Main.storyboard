@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19158" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bWR-94-fbJ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19141"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Air Holland-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ScheduleListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ScheduleListVC" customModule="RosterBuster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xVG-or-daw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="b2l-Ny-uLs"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="OI7-mP-Tle"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xVG-or-daw" secondAttribute="trailing" id="0th-Db-sHG"/>
+                            <constraint firstItem="xVG-or-daw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Um-B0-0D6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xVG-or-daw" secondAttribute="bottom" id="ZSw-bw-azt"/>
+                            <constraint firstItem="xVG-or-daw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bqD-8f-n1S"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Air Holland" id="Ocg-Mi-KlZ"/>
+                    <connections>
+                        <outlet property="schedulesTableView" destination="xVG-or-daw" id="vCS-4l-BTC"/>
+                        <segue destination="vyl-Af-Oap" kind="show" identifier="segueScheduleListToDetails" id="aaa-Bw-2HE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1026.0869565217392" y="79.6875"/>
+        </scene>
+        <!--Schedule Details-->
+        <scene sceneID="hTB-U8-pa8">
+            <objects>
+                <viewController storyboardIdentifier="ScheduleDetailsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vyl-Af-Oap" customClass="ScheduleDetailsVC" customModule="RosterBuster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YyJ-vv-hj3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11 July 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mkd-s5-clB">
+                                <rect key="frame" x="296" y="128" width="97" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="airplane" translatesAutoresizingMaskIntoConstraints="NO" id="vEJ-cf-IMG">
+                                <rect key="frame" x="187" y="177" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="kRq-iU-ZQd"/>
+                                    <constraint firstAttribute="height" constant="40" id="na4-al-Jq4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DL" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEI-W9-eVL">
+                                <rect key="frame" x="20" y="184" width="135" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnd-ef-OLu">
+                                <rect key="frame" x="259" y="184" width="135" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6:45 to 8:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LI0-YR-ILt">
+                                <rect key="frame" x="155.5" y="237" width="103.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aircraft type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lem-kP-VGb">
+                                <rect key="frame" x="32" y="293" width="90" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ag3-U6-GSU">
+                                <rect key="frame" x="32" y="334.5" width="34.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Captain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMq-di-wcj">
+                                <rect key="frame" x="32" y="380" width="56" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Aircraft type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFp-oL-sUy">
+                                <rect key="frame" x="166" y="293" width="228" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Duty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Of8-7E-bop">
+                                <rect key="frame" x="166" y="334.5" width="228" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Captain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDr-zd-1sm">
+                                <rect key="frame" x="166" y="380" width="228" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Officer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0X-GW-aeZ">
+                                <rect key="frame" x="32" y="424.5" width="86" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight Attendant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgl-lf-qhO">
+                                <rect key="frame" x="32" y="470" width="116" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="First Officer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4a2-fo-OEC">
+                                <rect key="frame" x="166" y="424.5" width="228" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Flight Attendant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzD-fz-5UD">
+                                <rect key="frame" x="166" y="470" width="228" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GAA-wU-8VS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="w0X-GW-aeZ" firstAttribute="leading" secondItem="VMq-di-wcj" secondAttribute="leading" id="0fu-sH-Saz"/>
+                            <constraint firstItem="GDr-zd-1sm" firstAttribute="leading" secondItem="Of8-7E-bop" secondAttribute="leading" id="4Cf-zK-0QJ"/>
+                            <constraint firstItem="Ag3-U6-GSU" firstAttribute="leading" secondItem="lem-kP-VGb" secondAttribute="leading" id="7X0-Th-YAn"/>
+                            <constraint firstItem="IFp-oL-sUy" firstAttribute="leading" secondItem="lem-kP-VGb" secondAttribute="trailing" constant="44" id="BU8-iW-Tpz"/>
+                            <constraint firstItem="4a2-fo-OEC" firstAttribute="centerY" secondItem="w0X-GW-aeZ" secondAttribute="centerY" id="D6k-6Y-hg3"/>
+                            <constraint firstItem="GAA-wU-8VS" firstAttribute="trailing" secondItem="GDr-zd-1sm" secondAttribute="trailing" constant="20" id="FQy-NW-7Vf"/>
+                            <constraint firstItem="GAA-wU-8VS" firstAttribute="trailing" secondItem="Mkd-s5-clB" secondAttribute="trailing" constant="21" id="GPb-eV-8Cp"/>
+                            <constraint firstItem="Mkd-s5-clB" firstAttribute="top" secondItem="GAA-wU-8VS" secondAttribute="top" constant="40" id="HBV-5j-CEI"/>
+                            <constraint firstItem="GDr-zd-1sm" firstAttribute="centerY" secondItem="VMq-di-wcj" secondAttribute="centerY" id="HbT-nA-aTD"/>
+                            <constraint firstItem="GAA-wU-8VS" firstAttribute="trailing" secondItem="lnd-ef-OLu" secondAttribute="trailing" constant="20" id="IY4-gy-ttC"/>
+                            <constraint firstItem="vEJ-cf-IMG" firstAttribute="leading" secondItem="XEI-W9-eVL" secondAttribute="trailing" constant="32" id="IlU-fH-Eq9"/>
+                            <constraint firstItem="LI0-YR-ILt" firstAttribute="top" secondItem="vEJ-cf-IMG" secondAttribute="bottom" constant="20" id="KMa-NB-dnw"/>
+                            <constraint firstItem="Ag3-U6-GSU" firstAttribute="top" secondItem="lem-kP-VGb" secondAttribute="bottom" constant="22" id="Ly8-NY-RnZ"/>
+                            <constraint firstItem="vEJ-cf-IMG" firstAttribute="centerX" secondItem="YyJ-vv-hj3" secondAttribute="centerX" id="MRu-85-Rug"/>
+                            <constraint firstItem="VMq-di-wcj" firstAttribute="top" secondItem="Ag3-U6-GSU" secondAttribute="bottom" constant="26" id="Mow-1W-SDc"/>
+                            <constraint firstItem="4a2-fo-OEC" firstAttribute="leading" secondItem="GDr-zd-1sm" secondAttribute="leading" id="N8l-bU-QA2"/>
+                            <constraint firstItem="lnd-ef-OLu" firstAttribute="leading" secondItem="vEJ-cf-IMG" secondAttribute="trailing" constant="32" id="QF7-96-qop"/>
+                            <constraint firstItem="w0X-GW-aeZ" firstAttribute="top" secondItem="VMq-di-wcj" secondAttribute="bottom" constant="25" id="Qqg-5u-djD"/>
+                            <constraint firstItem="Mgl-lf-qhO" firstAttribute="leading" secondItem="w0X-GW-aeZ" secondAttribute="leading" id="RwP-X8-Khy"/>
+                            <constraint firstItem="GAA-wU-8VS" firstAttribute="trailing" secondItem="Of8-7E-bop" secondAttribute="trailing" constant="20" id="UTZ-mD-Eky"/>
+                            <constraint firstItem="GAA-wU-8VS" firstAttribute="trailing" secondItem="4a2-fo-OEC" secondAttribute="trailing" constant="20" id="Wj1-eO-r1H"/>
+                            <constraint firstItem="GAA-wU-8VS" firstAttribute="trailing" secondItem="IFp-oL-sUy" secondAttribute="trailing" constant="20" id="XJx-pQ-6Dc"/>
+                            <constraint firstItem="Mgl-lf-qhO" firstAttribute="top" secondItem="w0X-GW-aeZ" secondAttribute="bottom" constant="26" id="YJk-er-dbY"/>
+                            <constraint firstItem="Of8-7E-bop" firstAttribute="leading" secondItem="IFp-oL-sUy" secondAttribute="leading" id="YQp-s6-XhK"/>
+                            <constraint firstItem="kzD-fz-5UD" firstAttribute="leading" secondItem="4a2-fo-OEC" secondAttribute="leading" id="Yay-NB-lST"/>
+                            <constraint firstItem="IFp-oL-sUy" firstAttribute="centerY" secondItem="lem-kP-VGb" secondAttribute="centerY" id="Ylg-xX-unA"/>
+                            <constraint firstItem="lem-kP-VGb" firstAttribute="top" secondItem="LI0-YR-ILt" secondAttribute="bottom" constant="35" id="b1G-83-e10"/>
+                            <constraint firstItem="lnd-ef-OLu" firstAttribute="centerY" secondItem="vEJ-cf-IMG" secondAttribute="centerY" id="c8m-hg-m0u"/>
+                            <constraint firstItem="GAA-wU-8VS" firstAttribute="trailing" secondItem="kzD-fz-5UD" secondAttribute="trailing" constant="20" id="g9f-fq-ot3"/>
+                            <constraint firstItem="LI0-YR-ILt" firstAttribute="centerX" secondItem="YyJ-vv-hj3" secondAttribute="centerX" id="hJC-za-dCi"/>
+                            <constraint firstItem="Of8-7E-bop" firstAttribute="centerY" secondItem="Ag3-U6-GSU" secondAttribute="centerY" id="hev-Eq-M6B"/>
+                            <constraint firstItem="kzD-fz-5UD" firstAttribute="centerY" secondItem="Mgl-lf-qhO" secondAttribute="centerY" id="hqR-3d-Ltm"/>
+                            <constraint firstItem="lem-kP-VGb" firstAttribute="leading" secondItem="GAA-wU-8VS" secondAttribute="leading" constant="32" id="jDa-O0-s97"/>
+                            <constraint firstItem="vEJ-cf-IMG" firstAttribute="top" secondItem="GAA-wU-8VS" secondAttribute="top" constant="89" id="mge-CQ-K14"/>
+                            <constraint firstItem="XEI-W9-eVL" firstAttribute="leading" secondItem="GAA-wU-8VS" secondAttribute="leading" constant="20" id="q4A-oo-zq0"/>
+                            <constraint firstItem="XEI-W9-eVL" firstAttribute="centerY" secondItem="vEJ-cf-IMG" secondAttribute="centerY" id="x2i-GJ-ymU"/>
+                            <constraint firstItem="VMq-di-wcj" firstAttribute="leading" secondItem="Ag3-U6-GSU" secondAttribute="leading" id="xBO-CU-bYP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Schedule Details" id="irF-eh-KFI"/>
+                    <connections>
+                        <outlet property="aircraftTypeLabel" destination="IFp-oL-sUy" id="zcl-iK-1iF"/>
+                        <outlet property="captainNameLabel" destination="GDr-zd-1sm" id="v0z-oT-DXq"/>
+                        <outlet property="dateLabel" destination="Mkd-s5-clB" id="u0Y-FR-8e0"/>
+                        <outlet property="destinationLabel" destination="lnd-ef-OLu" id="KdJ-eD-uvv"/>
+                        <outlet property="dutyLabel" destination="Of8-7E-bop" id="nRO-KF-gtq"/>
+                        <outlet property="firstOfficerLabel" destination="4a2-fo-OEC" id="wdN-mA-JNm"/>
+                        <outlet property="flightAttendantLabel" destination="kzD-fz-5UD" id="D1b-Ed-y1u"/>
+                        <outlet property="flightImageView" destination="vEJ-cf-IMG" id="X0W-AC-6YP"/>
+                        <outlet property="flightTimeLabel" destination="LI0-YR-ILt" id="yfz-j4-0l4"/>
+                        <outlet property="sourceLabel" destination="XEI-W9-eVL" id="kyK-L2-mpA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WGI-wc-MOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1847.826086956522" y="79.6875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GKw-9C-QIz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bWR-94-fbJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7MC-Xy-Nzr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.21603954081632654" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Pxf-fV-cpn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9qw-6R-qfy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115.94202898550725" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="airplane" width="96" height="96"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
